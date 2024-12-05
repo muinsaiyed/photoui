@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Photon Image Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="lightBeam"></canvas>
+    <div class="container">
+        <h1 class="title">Photon Image Generator</h1>
+        <p class="subtitle">Generate amazing images with Photon AI</p>
+        
+        <form id="generate-form">
+            <div class="input-container">
+                <input type="textarea" id="prompt" name="prompt" class="input" placeholder="Enter your prompt here..." required>
+            </div>
+
+            <div class="aspect-ratio-buttons">
+                <button type="button" class="aspect-button" data-ratio="1:1">1:1</button>
+                <button type="button" class="aspect-button" data-ratio="3:4">3:4</button>
+                <button type="button" class="aspect-button" data-ratio="4:3">4:3</button>
+                <button type="button" class="aspect-button selected" data-ratio="16:9">16:9</button>
+                <button type="button" class="aspect-button" data-ratio="9:16">9:16</button>
+                <button type="button" class="aspect-button" data-ratio="21:9">21:9</button>
+                <button type="button" class="aspect-button" data-ratio="9:21">9:21</button>
+            </div>
+
+            <div class="dropdown-container">
+                <select id="model" name="model" class="dropdown">
+                    <option value="photon-1" selected>photon-1</option>
+                    <option value="photon-flash-1">photon-flash-1</option>
+                </select>
+            </div>
+
+            <button type="submit" class="generate-button">Generate Image</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
